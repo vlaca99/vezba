@@ -1,0 +1,37 @@
+@import 'partials/vars';
+@import 'partials/mixins';
+
+*, *:before, *:after{
+	margin: 0;
+	padding: 0;
+	@include box-sizing;
+}
+
+h1 {
+	margin-bottom: 3em;
+	text-align: center;
+}
+
+main {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+input, textarea {
+	@include input;
+	@include border-radius(4px);
+	@include outlinBoxShadow
+}
+
+.btn {
+	@include button;
+	@include border-radius(4px);
+}
+
+form {
+	width: 600px;
+	margin: 0 auto;
+	.form-group {
+		margin-bottom: 1em;
+	}
+}
